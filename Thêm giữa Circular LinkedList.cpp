@@ -36,14 +36,13 @@ int demNode(node* head) {
 	}
 	return dem;
 }
-
 void print(node* head) {
-	node* tmp = head->next;
-	cout << head->data << " ";
-	while (tmp != head) {
+	if (head == NULL) return;
+	node* tmp = head;
+	do {
 		cout << tmp->data << " ";
 		tmp = tmp->next;
-	}
+	} while (tmp != head);
 }
 void themDau(node*& head, int x) {
 	node* newNode = makeNode(x);
